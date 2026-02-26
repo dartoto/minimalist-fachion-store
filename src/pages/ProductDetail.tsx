@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { products } from '../lib/data';
 import { ChevronLeft, Star, ShoppingCart } from 'lucide-react';
 import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
-import type { Product } from '../types';
 
 const ProductDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
