@@ -65,7 +65,7 @@ const ProductDetail: React.FC = () => {
                         <div className="pt-8 border-t border-beige-200">
                             <h3 className="text-sm font-normal text-darkgray-900 uppercase tracking-widest mb-6">Order with PayPal</h3>
                             <div className="max-w-md">
-                                <PayPalScriptProvider options={{ clientId: "test" }}>
+                                <PayPalScriptProvider options={{ clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID || "test" }}>
                                     <PayPalButtons
                                         style={{ layout: "vertical", color: "black", shape: "rect", label: "checkout" }}
                                         createOrder={(_data, actions) => {
